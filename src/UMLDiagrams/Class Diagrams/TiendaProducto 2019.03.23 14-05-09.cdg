@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="TiendaProducto">
+  <ClassDiagramComponents>
+    <Class name="FactoriaDeTiendas" package="TiendaProducto" visibility="public" xPosition="5.0" yPosition="68.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="creaTienda" returnType="Tienda" visibility="public" isStatic="true">
+          <Argument type="String" name="idTienda"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="localizacion"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductoImpl" package="TiendaProducto" visibility="public" xPosition="504.0" yPosition="536.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TiendaImpl" package="TiendaProducto" visibility="public" xPosition="802.0" yPosition="11.0">
+      <Fields>
+        <Field name="fdT" type="FactoriaDeTiendas" visibility="private"/>
+        <Field name="idTienda" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="localizacion" type="String" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="ldp" type="List&lt;Producto&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="idTienda"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="localizacion"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getLocalizacion" returnType="String" visibility="public"/>
+        <Method name="setLocalizacion" returnType="void" visibility="public">
+          <Argument type="String" name="localizacion"/>
+        </Method>
+        <Method name="getCliente" returnType="Cliente" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="getLdp" returnType="List&lt;Producto&gt;" visibility="public"/>
+        <Method name="setLdp" returnType="void" visibility="public">
+          <Argument type="List&lt;Producto&gt;" name="ldp"/>
+        </Method>
+        <Method name="getIdTienda" returnType="String" visibility="public"/>
+        <Method name="setIdTienda" returnType="void" visibility="public">
+          <Argument type="String" name="idTienda"/>
+        </Method>
+        <Method name="addProducto" returnType="boolean" visibility="public">
+          <Argument type="Producto" name="e"/>
+        </Method>
+        <Method name="removeProducto" returnType="boolean" visibility="public">
+          <Argument type="Producto" name="e"/>
+        </Method>
+        <Method name="creaProducto" returnType="boolean" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Producto" package="TiendaProducto" visibility="public" xPosition="134.0" yPosition="340.0">
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="package"/>
+        <Method name="getPrecio" returnType="double" visibility="package"/>
+        <Method name="setNombre" returnType="void" visibility="package">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setPrecio" returnType="void" visibility="package">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Interface name="Tienda" package="TiendaProducto" visibility="public" xPosition="955.0" yPosition="548.0">
+      <Methods>
+        <Method name="getCliente" returnType="Cliente" visibility="package"/>
+        <Method name="getIdTienda" returnType="String" visibility="package"/>
+        <Method name="getLdp" returnType="List&lt;Producto&gt;" visibility="package"/>
+        <Method name="getLocalizacion" returnType="String" visibility="package"/>
+        <Method name="getNombre" returnType="String" visibility="package"/>
+        <Method name="setCliente" returnType="void" visibility="package">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="setIdTienda" returnType="void" visibility="package">
+          <Argument type="String" name="idTienda"/>
+        </Method>
+        <Method name="setLdp" returnType="void" visibility="package">
+          <Argument type="List&lt;Producto&gt;" name="ldp"/>
+        </Method>
+        <Method name="setLocalizacion" returnType="void" visibility="package">
+          <Argument type="String" name="localizacion"/>
+        </Method>
+        <Method name="setNombre" returnType="void" visibility="package">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="addProducto" returnType="boolean" visibility="package">
+          <Argument type="Producto" name="e"/>
+        </Method>
+        <Method name="removeProducto" returnType="boolean" visibility="package">
+          <Argument type="Producto" name="e"/>
+        </Method>
+        <Method name="creaProducto" returnType="boolean" visibility="package">
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="ldp" source="TiendaProducto.TiendaImpl" target="TiendaProducto.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Producto&gt;"/>
+    <HasRelation name="fdT" source="TiendaProducto.TiendaImpl" target="TiendaProducto.FactoriaDeTiendas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="TiendaProducto.TiendaImpl" target="TiendaProducto.Tienda"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="TiendaProducto.ProductoImpl" target="TiendaProducto.Producto"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

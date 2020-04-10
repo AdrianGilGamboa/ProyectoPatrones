@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Fachada">
+  <ClassDiagramComponents>
+    <Class name="Multinacional" package="Fachada" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="ListaDeClientes" type="List&lt;Cliente&gt;" visibility="private"/>
+        <Field name="ListaDeTiendas" type="List&lt;Tienda&gt;" visibility="private"/>
+        <Field name="OC" type="OrdenadorCentral" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getListaDeClientes" returnType="List&lt;Cliente&gt;" visibility="public"/>
+        <Method name="setListaDeClientes" returnType="void" visibility="public">
+          <Argument type="List&lt;Cliente&gt;" name="ListaDeClientes"/>
+        </Method>
+        <Method name="getListaDeTiendas" returnType="List&lt;Tienda&gt;" visibility="public"/>
+        <Method name="setListaDeTiendas" returnType="void" visibility="public">
+          <Argument type="List&lt;Tienda&gt;" name="ListaDeTiendas"/>
+        </Method>
+        <Method name="addCliente" returnType="boolean" visibility="public">
+          <Argument type="Cliente" name="e"/>
+        </Method>
+        <Method name="addTienda" returnType="boolean" visibility="public">
+          <Argument type="Tienda" name="e"/>
+        </Method>
+        <Method name="creaClienteNormal" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="idCuenta"/>
+          <Argument type="double" name="balance"/>
+        </Method>
+        <Method name="creaClienteFranquiciado" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="idCuenta"/>
+          <Argument type="double" name="balance"/>
+          <Argument type="String" name="idTienda"/>
+          <Argument type="String" name="nombreTienda"/>
+          <Argument type="String" name="localizacion"/>
+        </Method>
+        <Method name="creaClienteSocio" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="idCuenta"/>
+          <Argument type="double" name="balance"/>
+        </Method>
+        <Method name="creaTienda" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="localizacion"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="asciendeASocio" returnType="boolean" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="InicioSesion" returnType="Cliente" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="BuscarCliente" returnType="Cliente" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="BuscarTienda" returnType="Tienda" visibility="public">
+          <Argument type="String" name="idTienda"/>
+        </Method>
+        <Method name="InicioSesionFranquiciado" returnType="Cliente" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="idTienda"/>
+        </Method>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getSaldoMultinacional" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="BancoCuenta">
+  <ClassDiagramComponents>
+    <Class name="CuentaBancariaImpl" package="BancoCuenta" visibility="public" xPosition="79.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="balance" type="double" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="double" name="balance"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getBalance" returnType="double" visibility="public"/>
+        <Method name="setBalance" returnType="void" visibility="public">
+          <Argument type="double" name="balance"/>
+        </Method>
+        <Method name="getCliente" returnType="Cliente" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EntidadBancaria" package="BancoCuenta" visibility="public" xPosition="589.0" yPosition="349.0">
+      <Fields>
+        <Field name="fdc" type="FactoriaDeCuentas" visibility="private"/>
+        <Field name="idBancoCentral" type="String" visibility="private"/>
+        <Field name="nombreBanco" type="String" visibility="private"/>
+        <Field name="saldoTotalEmpresa" type="double" visibility="private"/>
+        <Field name="ldClientes" type="List&lt;Cliente&gt;" visibility="private"/>
+        <Field name="ldCB" type="List&lt;CuentaBancaria&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="idBancoCentral"/>
+          <Argument type="String" name="nombreBanco"/>
+          <Argument type="double" name="saldoTotalEmpresa"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="creaCuentaBancaria" returnType="CuentaBancaria" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="double" name="balance"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="getSaldoTotalEmpresa" returnType="double" visibility="public"/>
+        <Method name="setSaldoTotalEmpresa" returnType="void" visibility="public">
+          <Argument type="double" name="saldoTotalEmpresa"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FactoriaDeCuentas" package="BancoCuenta" visibility="public" xPosition="525.0" yPosition="39.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="creaCuentaBancaria" returnType="CuentaBancaria" visibility="public" isStatic="true">
+          <Argument type="String" name="id"/>
+          <Argument type="double" name="balance"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="CuentaBancaria" package="BancoCuenta" visibility="public" xPosition="159.0" yPosition="363.0">
+      <Methods>
+        <Method name="getBalance" returnType="double" visibility="package"/>
+        <Method name="getCliente" returnType="Cliente" visibility="package"/>
+        <Method name="getId" returnType="String" visibility="package"/>
+        <Method name="setBalance" returnType="void" visibility="package">
+          <Argument type="double" name="balance"/>
+        </Method>
+        <Method name="setCliente" returnType="void" visibility="package">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="setId" returnType="void" visibility="package">
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="ldCB" source="BancoCuenta.EntidadBancaria" target="BancoCuenta.CuentaBancaria" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;CuentaBancaria&gt;"/>
+    <HasRelation name="fdc" source="BancoCuenta.EntidadBancaria" target="BancoCuenta.FactoriaDeCuentas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="BancoCuenta.CuentaBancariaImpl" target="BancoCuenta.CuentaBancaria"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

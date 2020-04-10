@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="IS2TrabajoPatrones">
+  <ClassDiagramComponents>
+    <Class name="ClienteFranquiciado" package="is2trabajopatrones" visibility="public" xPosition="1221.0" yPosition="197.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="comprar" returnType="void" visibility="public">
+          <Argument type="Tienda" name="t"/>
+          <Argument type="Producto" name="p"/>
+          <Argument type="CuentaBancaria" name="cb"/>
+        </Method>
+        <Method name="restarDinero" returnType="void" visibility="public">
+          <Argument type="Producto" name="p"/>
+          <Argument type="CuentaBancaria" name="cb"/>
+        </Method>
+        <Method name="sumarDinero" returnType="void" visibility="public">
+          <Argument type="Tienda" name="t"/>
+          <Argument type="Producto" name="p"/>
+        </Method>
+        <Method name="restaMultinacional" returnType="void" visibility="public">
+          <Argument type="Producto" name="p"/>
+        </Method>
+        <Method name="borrarProductoTienda" returnType="void" visibility="public">
+          <Argument type="Tienda" name="t"/>
+          <Argument type="Producto" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteFranquiciadoImpl" package="is2trabajopatrones" visibility="public" xPosition="1784.0" yPosition="545.0">
+      <Fields>
+        <Field name="tienda" type="Tienda" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="Estrategia" name="estrategia"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTienda" returnType="Tienda" visibility="public"/>
+        <Method name="setTienda" returnType="void" visibility="public">
+          <Argument type="Tienda" name="tienda"/>
+        </Method>
+        <Method name="getEstrategia" returnType="Estrategia" visibility="public"/>
+        <Method name="setEstrategia" returnType="void" visibility="public">
+          <Argument type="Estrategia" name="estrategia"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteImpl" package="is2trabajopatrones" visibility="public" xPosition="537.0" yPosition="678.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="cuentabancaria" type="CuentaBancaria" visibility="private"/>
+        <Field name="estrategia" type="Estrategia" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="Estrategia" name="estrategia"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getCuentabancaria" returnType="CuentaBancaria" visibility="public"/>
+        <Method name="setCuentabancaria" returnType="void" visibility="public">
+          <Argument type="CuentaBancaria" name="cuentabancaria"/>
+        </Method>
+        <Method name="getEstrategia" returnType="Estrategia" visibility="public"/>
+        <Method name="setEstrategia" returnType="void" visibility="public">
+          <Argument type="Estrategia" name="estrategia"/>
+        </Method>
+        <Method name="Comprar" returnType="void" visibility="public">
+          <Argument type="Producto" name="p"/>
+          <Argument type="Tienda" name="t"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteNormal" package="is2trabajopatrones" visibility="public" xPosition="1729.0" yPosition="242.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="comprar" returnType="void" visibility="public">
+          <Argument type="Tienda" name="t"/>
+          <Argument type="Producto" name="p"/>
+          <Argument type="CuentaBancaria" name="cb"/>
+        </Method>
+        <Method name="restarDinero" returnType="void" visibility="public">
+          <Argument type="Producto" name="p"/>
+          <Argument type="CuentaBancaria" name="cb"/>
+        </Method>
+        <Method name="sumarDinero" returnType="void" visibility="public">
+          <Argument type="Tienda" name="t"/>
+          <Argument type="Producto" name="p"/>
+        </Method>
+        <Method name="borrarProductoTienda" returnType="void" visibility="public">
+          <Argument type="Tienda" name="t"/>
+          <Argument type="Producto" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteSocio" package="is2trabajopatrones" visibility="public" xPosition="1755.0" yPosition="419.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="comprar" returnType="void" visibility="public">
+          <Argument type="Tienda" name="t"/>
+          <Argument type="Producto" name="p"/>
+          <Argument type="CuentaBancaria" name="cb"/>
+        </Method>
+        <Method name="restarDinero" returnType="void" visibility="public">
+          <Argument type="Producto" name="p"/>
+          <Argument type="CuentaBancaria" name="cb"/>
+        </Method>
+        <Method name="sumarDinero" returnType="void" visibility="public">
+          <Argument type="Tienda" name="t"/>
+          <Argument type="Producto" name="p"/>
+        </Method>
+        <Method name="borrarProductoTienda" returnType="void" visibility="public">
+          <Argument type="Tienda" name="t"/>
+          <Argument type="Producto" name="p"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CuentaBancariaImpl" package="is2trabajopatrones" visibility="public" xPosition="767.0" yPosition="825.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="balance" type="double" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="double" name="balance"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getBalance" returnType="double" visibility="public"/>
+        <Method name="setBalance" returnType="void" visibility="public">
+          <Argument type="double" name="balance"/>
+        </Method>
+        <Method name="getCliente" returnType="Cliente" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EntidadBancaria" package="is2trabajopatrones" visibility="public" xPosition="1571.0" yPosition="665.0">
+      <Fields>
+        <Field name="fdc" type="FactoriaDeCuentas" visibility="private"/>
+        <Field name="idBancoCentral" type="String" visibility="private"/>
+        <Field name="nombreBanco" type="String" visibility="private"/>
+        <Field name="saldoTotalEmpresa" type="double" visibility="private"/>
+        <Field name="ldClientes" type="List&lt;Cliente&gt;" visibility="private"/>
+        <Field name="ldCB" type="List&lt;CuentaBancaria&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="idBancoCentral"/>
+          <Argument type="String" name="nombreBanco"/>
+          <Argument type="double" name="saldoTotalEmpresa"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="creaCuentaBancaria" returnType="CuentaBancaria" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="double" name="balance"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="getSaldoTotalEmpresa" returnType="double" visibility="public"/>
+        <Method name="setSaldoTotalEmpresa" returnType="void" visibility="public">
+          <Argument type="double" name="saldoTotalEmpresa"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FactoriaDeClientes" package="is2trabajopatrones" visibility="public" xPosition="1817.0" yPosition="804.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="creaClienteNormal" returnType="Cliente" visibility="public" isStatic="true">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="creaClienteSocio" returnType="Cliente" visibility="public" isStatic="true">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="creaClienteFranquiciado" returnType="Cliente" visibility="public" isStatic="true">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FactoriaDeCuentas" package="is2trabajopatrones" visibility="public" xPosition="1887.0" yPosition="665.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="creaCuentaBancaria" returnType="CuentaBancaria" visibility="public" isStatic="true">
+          <Argument type="String" name="id"/>
+          <Argument type="double" name="balance"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FactoriaDeTiendas" package="is2trabajopatrones" visibility="public" xPosition="958.0" yPosition="831.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="creaTienda" returnType="Tienda" visibility="public" isStatic="true">
+          <Argument type="String" name="idTienda"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="localizacion"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="IS2TrabajoPatrones" package="is2trabajopatrones" visibility="public" xPosition="636.0" yPosition="175.0">
+      <Fields>
+        <Field name="pantIni" type="PantallaInicio_GUI" visibility="public" isStatic="true"/>
+        <Field name="iniSes" type="InicioSesion_GUI" visibility="public" isStatic="true"/>
+        <Field name="regCuen" type="RegistroCuenta_GUI" visibility="public" isStatic="true"/>
+        <Field name="creaFranq" type="CreaFranquicia_GUI" visibility="public" isStatic="true"/>
+        <Field name="iniSesAdmin" type="InicioSesionAdministrador_GUI" visibility="public" isStatic="true"/>
+        <Field name="creaClNorm" type="CreaClienteNormal_GUI" visibility="public" isStatic="true"/>
+        <Field name="creaCliSos" type="CreaClienteSocio_GUI" visibility="public" isStatic="true"/>
+        <Field name="clNorm" type="ClienteNormal_GUI" visibility="public" isStatic="true"/>
+        <Field name="clFranq" type="ClienteFranquiciado_GUI" visibility="public" isStatic="true"/>
+        <Field name="clSoc" type="ClienteSocio_GUI" visibility="public" isStatic="true"/>
+        <Field name="compra" type="Compra_GUI" visibility="public" isStatic="true"/>
+        <Field name="sesAdm" type="SesionAdministrador_GUI" visibility="public" isStatic="true"/>
+        <Field name="trabajo" type="Multinacional" visibility="public" isStatic="true"/>
+        <Field name="sesionActual" type="Cliente" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="ProductosElectronicos" returnType="void" visibility="public" isStatic="true">
+          <Argument type="List&lt;Producto&gt;" name="listaEjemploProductos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Multinacional" package="is2trabajopatrones" visibility="public" xPosition="1116.0" yPosition="163.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="ListaDeClientes" type="List&lt;Cliente&gt;" visibility="private"/>
+        <Field name="ListaDeTiendas" type="List&lt;Tienda&gt;" visibility="private"/>
+        <Field name="OC" type="OrdenadorCentral" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getListaDeClientes" returnType="List&lt;Cliente&gt;" visibility="public"/>
+        <Method name="setListaDeClientes" returnType="void" visibility="public">
+          <Argument type="List&lt;Cliente&gt;" name="ListaDeClientes"/>
+        </Method>
+        <Method name="getListaDeTiendas" returnType="List&lt;Tienda&gt;" visibility="public"/>
+        <Method name="setListaDeTiendas" returnType="void" visibility="public">
+          <Argument type="List&lt;Tienda&gt;" name="ListaDeTiendas"/>
+        </Method>
+        <Method name="addCliente" returnType="boolean" visibility="public">
+          <Argument type="Cliente" name="e"/>
+        </Method>
+        <Method name="addTienda" returnType="boolean" visibility="public">
+          <Argument type="Tienda" name="e"/>
+        </Method>
+        <Method name="creaClienteNormal" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="idCuenta"/>
+          <Argument type="double" name="balance"/>
+        </Method>
+        <Method name="creaClienteFranquiciado" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="idCuenta"/>
+          <Argument type="double" name="balance"/>
+          <Argument type="String" name="idTienda"/>
+          <Argument type="String" name="nombreTienda"/>
+          <Argument type="String" name="localizacion"/>
+        </Method>
+        <Method name="creaClienteSocio" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="idCuenta"/>
+          <Argument type="double" name="balance"/>
+        </Method>
+        <Method name="creaTienda" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="localizacion"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="asciendeASocio" returnType="boolean" visibility="public">
+          <Argument type="Cliente" name="c"/>
+        </Method>
+        <Method name="InicioSesion" returnType="Cliente" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="BuscarCliente" returnType="Cliente" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="BuscarTienda" returnType="Tienda" visibility="public">
+          <Argument type="String" name="idTienda"/>
+        </Method>
+        <Method name="InicioSesionFranquiciado" returnType="Cliente" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="idTienda"/>
+        </Method>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getSaldoMultinacional" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="OrdenadorCentral" package="is2trabajopatrones" visibility="public" xPosition="1200.0" yPosition="804.0">
+      <Fields>
+        <Field name="fdCl" type="FactoriaDeClientes" visibility="package"/>
+        <Field name="banco" type="EntidadBancaria" visibility="package"/>
+        <Field name="fdT" type="FactoriaDeTiendas" visibility="package"/>
+        <Field name="instancia" type="OrdenadorCentral" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getOrdenadorCentral" returnType="OrdenadorCentral" visibility="public" isStatic="true"/>
+        <Method name="creaClienteNormal" returnType="Cliente" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="creaClienteSocio" returnType="Cliente" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="creaClienteFranquiciado" returnType="Cliente" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="creaCuentaBancaria" returnType="CuentaBancaria" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="double" name="balance"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="creaTienda" returnType="Tienda" visibility="public">
+          <Argument type="String" name="idTienda"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="localizacion"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProductoImpl" package="is2trabajopatrones" visibility="public" xPosition="396.0" yPosition="413.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getPrecio" returnType="double" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TiendaImpl" package="is2trabajopatrones" visibility="public" xPosition="609.0" yPosition="419.0">
+      <Fields>
+        <Field name="idTienda" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="localizacion" type="String" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="ldp" type="List&lt;Producto&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="idTienda"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="localizacion"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getLocalizacion" returnType="String" visibility="public"/>
+        <Method name="setLocalizacion" returnType="void" visibility="public">
+          <Argument type="String" name="localizacion"/>
+        </Method>
+        <Method name="getCliente" returnType="Cliente" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="getLdp" returnType="List&lt;Producto&gt;" visibility="public"/>
+        <Method name="setLdp" returnType="void" visibility="public">
+          <Argument type="List&lt;Producto&gt;" name="ldp"/>
+        </Method>
+        <Method name="getIdTienda" returnType="String" visibility="public"/>
+        <Method name="setIdTienda" returnType="void" visibility="public">
+          <Argument type="String" name="idTienda"/>
+        </Method>
+        <Method name="addProducto" returnType="boolean" visibility="public">
+          <Argument type="Producto" name="e"/>
+        </Method>
+        <Method name="removeProducto" returnType="boolean" visibility="public">
+          <Argument type="Producto" name="e"/>
+        </Method>
+        <Method name="creaProducto" returnType="boolean" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Cliente" package="is2trabajopatrones" visibility="public" xPosition="888.0" yPosition="371.0">
+      <Methods>
+        <Method name="getEdad" returnType="int" visibility="package"/>
+        <Method name="getId" returnType="String" visibility="package"/>
+        <Method name="getNombre" returnType="String" visibility="package"/>
+        <Method name="setEdad" returnType="void" visibility="package">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="setId" returnType="void" visibility="package">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="setNombre" returnType="void" visibility="package">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="Comprar" returnType="void" visibility="package">
+          <Argument type="Producto" name="p"/>
+          <Argument type="Tienda" name="t"/>
+        </Method>
+        <Method name="getCuentabancaria" returnType="CuentaBancaria" visibility="package"/>
+        <Method name="setCuentabancaria" returnType="void" visibility="package">
+          <Argument type="CuentaBancaria" name="cuentaBancaria"/>
+        </Method>
+        <Method name="getEstrategia" returnType="Estrategia" visibility="package"/>
+        <Method name="setEstrategia" returnType="void" visibility="package">
+          <Argument type="Estrategia" name="estrategia"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Interface name="CuentaBancaria" package="is2trabajopatrones" visibility="public" xPosition="362.0" yPosition="815.0">
+      <Methods>
+        <Method name="getBalance" returnType="double" visibility="package"/>
+        <Method name="getCliente" returnType="Cliente" visibility="package"/>
+        <Method name="getId" returnType="String" visibility="package"/>
+        <Method name="setBalance" returnType="void" visibility="package">
+          <Argument type="double" name="balance"/>
+        </Method>
+        <Method name="setCliente" returnType="void" visibility="package">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="setId" returnType="void" visibility="package">
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="Estrategia" package="is2trabajopatrones" visibility="public" xPosition="1393.0" yPosition="424.0">
+      <Methods>
+        <Method name="comprar" returnType="void" visibility="package">
+          <Argument type="Tienda" name="t"/>
+          <Argument type="Producto" name="p"/>
+          <Argument type="CuentaBancaria" name="cb"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="Producto" package="is2trabajopatrones" visibility="public" xPosition="478.0" yPosition="566.0">
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="package"/>
+        <Method name="getPrecio" returnType="double" visibility="package"/>
+        <Method name="setNombre" returnType="void" visibility="package">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setPrecio" returnType="void" visibility="package">
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Interface name="Tienda" package="is2trabajopatrones" visibility="public" xPosition="1571.0" yPosition="877.0">
+      <Methods>
+        <Method name="getCliente" returnType="Cliente" visibility="package"/>
+        <Method name="getIdTienda" returnType="String" visibility="package"/>
+        <Method name="getLdp" returnType="List&lt;Producto&gt;" visibility="package"/>
+        <Method name="getLocalizacion" returnType="String" visibility="package"/>
+        <Method name="getNombre" returnType="String" visibility="package"/>
+        <Method name="setCliente" returnType="void" visibility="package">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="setIdTienda" returnType="void" visibility="package">
+          <Argument type="String" name="idTienda"/>
+        </Method>
+        <Method name="setLdp" returnType="void" visibility="package">
+          <Argument type="List&lt;Producto&gt;" name="ldp"/>
+        </Method>
+        <Method name="setLocalizacion" returnType="void" visibility="package">
+          <Argument type="String" name="localizacion"/>
+        </Method>
+        <Method name="setNombre" returnType="void" visibility="package">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="addProducto" returnType="boolean" visibility="package">
+          <Argument type="Producto" name="e"/>
+        </Method>
+        <Method name="removeProducto" returnType="boolean" visibility="package">
+          <Argument type="Producto" name="e"/>
+        </Method>
+        <Method name="creaProducto" returnType="boolean" visibility="package">
+          <Argument type="String" name="nombre"/>
+          <Argument type="double" name="precio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="is2trabajopatrones.ClienteFranquiciadoImpl" target="is2trabajopatrones.ClienteImpl"/>
+    <HasRelation name="OC" source="is2trabajopatrones.Multinacional" target="is2trabajopatrones.OrdenadorCentral" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fdCl" source="is2trabajopatrones.OrdenadorCentral" target="is2trabajopatrones.FactoriaDeClientes" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="is2trabajopatrones.TiendaImpl" target="is2trabajopatrones.Tienda"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="is2trabajopatrones.ClienteSocio" target="is2trabajopatrones.Estrategia"/>
+    <HasRelation name="ListaDeClientes" source="is2trabajopatrones.Multinacional" target="is2trabajopatrones.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Cliente&gt;"/>
+    <HasRelation name="ldClientes" source="is2trabajopatrones.EntidadBancaria" target="is2trabajopatrones.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Cliente&gt;"/>
+    <HasRelation name="cuentabancaria" source="is2trabajopatrones.ClienteImpl" target="is2trabajopatrones.CuentaBancaria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ListaDeTiendas" source="is2trabajopatrones.Multinacional" target="is2trabajopatrones.Tienda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Tienda&gt;"/>
+    <HasRelation name="tienda" source="is2trabajopatrones.ClienteFranquiciadoImpl" target="is2trabajopatrones.Tienda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ldCB" source="is2trabajopatrones.EntidadBancaria" target="is2trabajopatrones.CuentaBancaria" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;CuentaBancaria&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="is2trabajopatrones.ClienteNormal" target="is2trabajopatrones.Estrategia"/>
+    <HasRelation name="cliente" source="is2trabajopatrones.TiendaImpl" target="is2trabajopatrones.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="is2trabajopatrones.ProductoImpl" target="is2trabajopatrones.Producto"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="is2trabajopatrones.ClienteImpl" target="is2trabajopatrones.Cliente"/>
+    <HasRelation name="trabajo" source="is2trabajopatrones.IS2TrabajoPatrones" target="is2trabajopatrones.Multinacional" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="banco" source="is2trabajopatrones.OrdenadorCentral" target="is2trabajopatrones.EntidadBancaria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fdT" source="is2trabajopatrones.OrdenadorCentral" target="is2trabajopatrones.FactoriaDeTiendas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ldp" source="is2trabajopatrones.TiendaImpl" target="is2trabajopatrones.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Producto&gt;"/>
+    <HasRelation name="cliente" source="is2trabajopatrones.CuentaBancariaImpl" target="is2trabajopatrones.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="is2trabajopatrones.ClienteFranquiciado" target="is2trabajopatrones.Estrategia"/>
+    <HasRelation name="sesionActual" source="is2trabajopatrones.IS2TrabajoPatrones" target="is2trabajopatrones.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instancia" source="is2trabajopatrones.OrdenadorCentral" target="is2trabajopatrones.OrdenadorCentral" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fdc" source="is2trabajopatrones.EntidadBancaria" target="is2trabajopatrones.FactoriaDeCuentas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="is2trabajopatrones.CuentaBancariaImpl" target="is2trabajopatrones.CuentaBancaria"/>
+    <HasRelation name="estrategia" source="is2trabajopatrones.ClienteImpl" target="is2trabajopatrones.Estrategia" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
